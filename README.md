@@ -1,16 +1,47 @@
-# Custom Rounded Rectangle for Adobe After Effects
+# Custom Rounded Rectangle for Adobe After Effects (v1.1)
+
+[![Live Browser Simulator](https://img.shields.io/badge/Live%20Demo-AE%20ScriptUI%20Simulator-2c8cff?style=for-the-badge&logo=javascript)](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-CS6%20--%20CC%202026%2B-9999FF?style=for-the-badge&logo=adobeaftereffects)](https://www.adobe.com/products/aftereffects.html)
 
 A complete, production-grade tool, CEP extension, and expression engine for creating parametric vector rectangles with **individually customizable corner radii** in Adobe After Effects.
 
+> **Live Browser Simulator**: Test and preview this tool interactively in the [AE JS & ScriptUI Simulator](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx) directly in your browser without launching After Effects!
+
 Unlike After Effects' built-in `Rectangle Path` (which only supports a single global roundness value), this tool enables full, independent control of each corner (**Top-Left, Top-Right, Bottom-Right, Bottom-Left**) with mathematical **proportional scaling** to prevent overlapping curves, adhering to the **W3C CSS `border-radius` standard**.
+
+---
+
+## ✨ What's New in v1.1
+
+- **Two Distinct ScriptUI Tabs**:
+  - **Geometry Tab**:
+    - Scrubbable sliders + numeric text inputs for Width & Height ($10\text{ to }2000\text{ px}$).
+    - **Quick Dimension Presets**: Instant sizing for *Card (400×240)*, *Square (300×300)*, *HD (1920×1080)*, and *Banner (728×90)*.
+    - **Link All Corners**: Master Radius slider driving all 4 corners simultaneously.
+    - **2×2 Corner Radii Grid**: Independent sliders and fields for Top-Left, Top-Right, Bottom-Left, and Bottom-Right ($0\text{ to }500\text{ px}$).
+    - **Quick Corner Presets**: *Capsule / Pill*, *Top Tab*, *Bottom Tab*, *Diagonal*, *Card 30px*, and *Sharp 0px*.
+    - **W3C Prevent Overlap Toggle**: Mathematical proportional solver preventing corner collisions.
+  - **Appearance Tab**:
+    - **Interactive Color Swatches**: Real-time color swatches paired with direct hex inputs for both Fill and Stroke.
+    - **Opacity & Stroke Controls**: Sliders for Fill Opacity ($0\text{--}100\%$), Stroke Width ($0\text{--}50\text{ px}$), and Stroke Opacity ($0\text{--}100\%$).
+    - **0-Stroke Suppression**: Dynamic expression automatically suppresses stroke rendering when stroke width is 0.
+- **14 Master Effect Controls**: Builds a clean Shape Layer driven by native Slider, Checkbox, and Color Effect Controls for full timeline keyframing and Essential Graphics / MOGRT export.
+- **Legacy Version Preservation**: Previous version v1.0.0 is preserved in the `old/` directory.
 
 ---
 
 ## 📦 What's Included
 
 ```
-CustomRoundedRect/
+AECustomRoundedRect/
+├── CustomRoundedRect.jsx               # Standalone ScriptUI panel v1.1 (for direct AE usage)
+├── custom_rounded_rect.jsx             # Matching alias for simulator integration
 ├── CustomRoundedRect.zxp               # Signed package ready for Adobe Exchange submission
+│
+├── old/                                # Legacy version archive
+│   ├── CustomRoundedRect_v1.0.jsx      # Preserved legacy v1.0.0 ScriptUI script
+│   └── CustomRoundedRect.jsx           # Legacy v1.0.0
 │
 ├── extension/                          # Adobe CEP Extension source directory
 │   ├── CSXS/
@@ -26,12 +57,16 @@ CustomRoundedRect/
 │   │   └── hostscript.jsx              # ExtendScript backend running inside After Effects
 │   └── icons/                          # Menu & panel icons (iconNormal, iconDark, rollovers)
 │
-├── CustomRoundedRect.jsx               # Standalone ScriptUI panel (for direct AE script usage)
 ├── expressions/
-    ├── CustomRoundedRect_Expression.js # Standalone path expression (Effect Controls & hardcoded)
-    └── ResponsiveTextBox_Expression.js # Auto-sizing text box expression with sourceRectAtTime()
-
+│   ├── CustomRoundedRect_Expression.js # Standalone path expression (Effect Controls & hardcoded)
+│   └── ResponsiveTextBox_Expression.js # Auto-sizing text box expression with sourceRectAtTime()
+│
+├── screenshot.png                      # Panel UI preview
+├── README.md                           # Documentation & mathematical specification
+└── LICENSE                             # MIT License
 ```
+
+---
 
 ## 📐 Mathematical Specification
 
@@ -96,6 +131,28 @@ The path consists of **8 vertices** and tangent vectors (relative to each vertex
 | **$P_7$** | Left edge, TL curve start | $[-W/2,\; -H/2 + r_{TL}]$ | $[0,\; 0]$ | $[0,\; -r_{TL} \cdot \kappa]$ |
 
 The curve is closed with `createPath(points, inTangents, outTangents, true)`.
+
+---
+
+## 🚀 Installation
+
+### Option 1: Dockable ScriptUI Panel
+1. Copy `CustomRoundedRect.jsx` to:
+   - **Windows**: `C:\Program Files\Adobe\Adobe After Effects <version>\Support Files\Scripts\ScriptUI Panels\`
+   - **macOS**: `/Applications/Adobe After Effects <version>/Scripts/ScriptUI Panels/`
+2. Restart After Effects.
+3. Access from **Window > CustomRoundedRect.jsx**.
+
+### Option 2: Run Without Installing
+In After Effects, go to **File > Scripts > Run Script File...** and select `CustomRoundedRect.jsx`.
+
+---
+
+## 🔗 Related Projects
+
+- **[AE JS & ScriptUI Simulator](https://github.com/work2survive/AE_JS_builder)**: Browser-based emulator for developing and testing After Effects ScriptUI panels and 2D/3D shape layers.
+- **[AE Message Bubble Generator](https://github.com/work2survive/AE_message_bubble)**: Authentic, animated chat and text message bubbles for After Effects.
+- **[AE Pie Slice Tool](https://github.com/work2survive/AE-Pie-Slice-Tool)**: Procedural circular sectors, arcs, and pie slices for After Effects.
 
 ---
 
