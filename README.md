@@ -1,15 +1,15 @@
 # Custom Rounded Rectangle for Adobe After Effects (v1.1)
 
-[![Live Browser Simulator](https://img.shields.io/badge/Live%20Demo-AE%20ScriptUI%20Simulator-2c8cff?style=for-the-badge&logo=javascript)](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx)
+[![Live Browser Simulator](https://img.shields.io/badge/Live%20Demo-AE%20ScriptUI%20Simulator-2c8cff?style=for-the-badge&logo=javascript)](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx&autobuild=true)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-CS6%20--%20CC%202026%2B-9999FF?style=for-the-badge&logo=adobeaftereffects)](https://www.adobe.com/products/aftereffects.html)
 [![Built with Antigravity](https://img.shields.io/badge/Built%20With-Antigravity-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/)
 
-**Live Demo**: [https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx)
+**Live Demo**: [https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx&autobuild=true](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx&autobuild=true)
 
 A complete, production-grade tool, CEP extension, and expression engine for creating parametric vector rectangles with **individually customizable corner radii** in Adobe After Effects.
 
-> **Live Browser Simulator**: Test and preview this tool interactively in the [AE JS & ScriptUI Simulator](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx) directly in your browser without launching After Effects!
+> **Live Browser Simulator**: Test and preview this tool interactively in the [AE JS & ScriptUI Simulator](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx&autobuild=true) directly in your browser without launching After Effects!
 
 Unlike After Effects' built-in `Rectangle Path` (which only supports a single global roundness value), this tool enables full, independent control of each corner (**Top-Left, Top-Right, Bottom-Right, Bottom-Left**) with mathematical **proportional scaling** to prevent overlapping curves, adhering to the **W3C CSS `border-radius` standard**.
 
