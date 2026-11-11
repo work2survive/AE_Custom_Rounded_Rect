@@ -4,6 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-CS6%20--%20CC%202026%2B-9999FF?style=for-the-badge&logo=adobeaftereffects)](https://www.adobe.com/products/aftereffects.html)
 
+**Live Demo**: [https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx)
+
 A complete, production-grade tool, CEP extension, and expression engine for creating parametric vector rectangles with **individually customizable corner radii** in Adobe After Effects.
 
 > **Live Browser Simulator**: Test and preview this tool interactively in the [AE JS & ScriptUI Simulator](https://work2survive.github.io/AE_JS_builder/?jsx=custom_rounded_rect.jsx) directly in your browser without launching After Effects!
